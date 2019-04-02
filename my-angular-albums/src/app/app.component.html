@@ -4,4 +4,39 @@
   </h1>
 </div>
 
+<div class="container">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body text-center">
+        <h4 class="card-title">{{albumsArray[0].artist}}</h4>
+        <ul>
+          <li>{{albumsArray[0].album_name}}</li>
+          <li>{{albumsArray[0].genre}}</li>
+          <li>{{albumsArray[0].price}} {{albumsArray[0].currency}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body text-center">
+        <h4 class="card-title">{{albumsArray[1].artist}}</h4>
+        <ul>
+          <li>{{albumsArray[1].album_name}}</li>
+          <li>{{albumsArray[1].genre}}</li>
+          <li>{{albumsArray[1].price}} {{albumsArray[1].currency}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body text-center">
+        <h4 class="card-title">{{albumsArray[2].artist}}</h4>
+        <ul>
+          <li>{{albumsArray[2].album_name}}</li>
+          <li>{{albumsArray[2].genre}}</li>
+          <li>{{albumsArray[2].price}} {{albumsArray[2].currency}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <router-outlet></router-outlet>
