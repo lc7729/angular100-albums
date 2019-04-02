@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'my-angular-albums';
   albumsArray: Album[];
 
+  titleCounter = 1;
+
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
@@ -42,5 +44,9 @@ export class AppComponent {
     ];
 
     console.log(JSON.stringify(this.albumsArray, null, 4));
+
+    let interval = setInterval(() => this.titleCounter++, 2000);
+
+    setTimeout(() => clearInterval(interval), 6000);
   }
 }
