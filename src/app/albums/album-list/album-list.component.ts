@@ -41,9 +41,23 @@ export class AlbumListComponent implements OnInit {
         genre: "Pop/Rock",
         price: 12,
         currency: "EUR"
+      },
+      {
+        id: 4,
+        artist: "Pink Floyd",
+        album_name: "The Dark Side of the Moon",
+        genre: "Pop/Rock",
+        price: 13.5,
+        currency: "USD"
+      },
+      {
+        id: 5,
+        artist: "Grateful Dead",
+        album_name: "Aoxomoxoa",
+        genre: "Pop/Rock",
+        price: 16,
+        currency: "USD"
       }
     ];
-
   }
-
 }
