@@ -1,25 +1,14 @@
 <div class="card">
-  <div class="card-body text-center">
+  <div class="card-body">
     <h4 class="card-title">{{ album.artist }}</h4>
     <ul>
-      <li>{{ album.album_name }} ({{ album.year }})</li>
-      <li>{{ album.genre }}</li>
+      <li>{{ album.album_name }}</li>
+      <li>Released: {{ album.year }}</li>
       <li>{{ album.price }} {{ album.currency }}</li>
-      <li>
-        Decade:
-        <span [ngSwitch]="album.year.toString().substr(2, 1)">
-          <span *ngSwitchCase="5">50s</span>
-          <span *ngSwitchCase="6">60s</span>
-          <span *ngSwitchCase="7">70s</span>
-          <span *ngSwitchCase="8">80s</span>
-          <span *ngSwitchCase="9">90s</span>
-          <span *ngSwitchCase="1">10s</span>
-          <span *ngSwitchCase="2">20s</span>
-          <span *ngSwitchDefault>No year</span>
-        </span>
-      </li>
     </ul>
-    <p class="text-success" *ngIf="album.on_sale">On Sale!</p>
-    <button class="btn btn-primary" (click)="showAlbum()">See Details</button>
+  </div>
+  <div class="card-footer">
+    <img *ngIf="album.on_sale" src="../../../assets/img/sale.png" style="width:40px;height:40px;" />
+    <button class="btn btn-primary float-right" (click)="showAlbum()">See Details</button>
   </div>
 </div>
