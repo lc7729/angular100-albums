@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, ChangeDetectorRef, OnInit } from "@angular/core";
 
-import { Album } from "./albums/album.model";
+import { Album } from './albums/album.model';
+import { ALBUMS } from './albums/albums.data';
 
 @Component({
   selector: "app-root",
@@ -10,43 +11,16 @@ import { Album } from "./albums/album.model";
   // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  title = "my-angular-albums";
+  title = 'My Angular Albums';
   albumsArray: Album[];
   numbers: number[];
 
   titleCounter = 1;
 
-  // constructor(private cdr: ChangeDetectorRef) { }
+  constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    this.albumsArray = [
-      {
-        id: 1,
-        artist: "Tremonti",
-        album_name: "Dust",
-        genre: "Pop/Rock",
-        price: 12,
-        currency: "USD"
-      },
-      {
-        id: 2,
-        artist: "Bon Jovi",
-        album_name: "7800 Fahrerenheit",
-        genre: "Pop/Rock",
-        price: 7,
-        currency: "EUR"
-      },
-      {
-        id: 3,
-        artist: "The Beatles",
-        album_name: "The White Album",
-        genre: "Pop/Rock",
-        price: 12,
-        currency: "EUR"
-      }
-    ];
+    this.albumsArray = ALBUMS;
     this.numbers = [1, 2, 3];
 
     console.log(JSON.stringify(this.albumsArray, null, 4));
