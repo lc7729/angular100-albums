@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, ChangeDetectorRef, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-root",
@@ -6,5 +6,5 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef, OnInit } from "@
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "my-angular-albums";
+  title = "My Angular Albums";
 }

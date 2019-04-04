@@ -1,7 +1,7 @@
 <div class="container">
   <div class="card-deck">
-    <app-album-card class="card" [album]="albums[0]" (albumClicked)="parentFunctionHandler($event)"></app-album-card>
-    <app-album-card class="card" [album]="albums[1]" (albumClicked)="parentFunctionHandler($event)"></app-album-card>
-    <app-album-card class="card" [album]="albums[2]" (albumClicked)="parentFunctionHandler($event)"></app-album-card>
+    <app-album-card [album]="albums[0]" (albumClicked)="parentFunctionHandler($event)"></app-album-card>
+    <app-album-card [album]="albums[1]" (albumClicked)="parentFunctionHandler($event)"></app-album-card>
+    <app-album-card [album]="albums[2]" (albumClicked)="parentFunctionHandler($event)"></app-album-card>
   </div>
 </div>
