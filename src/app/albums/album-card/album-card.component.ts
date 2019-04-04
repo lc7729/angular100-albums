@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Album } from "../album.model";
+import { ALBUMS } from '../albums.data';
 
 @Component({
   selector: "app-album-card",
@@ -12,13 +13,6 @@ export class AlbumCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.album = {
-      id: 1,
-      artist: "Tremonti",
-      album_name: "Dust",
-      genre: "Pop/Rock",
-      price: 12,
-      currency: "USD"
-    };
+    this.album = ALBUMS[0];
   }
 }
