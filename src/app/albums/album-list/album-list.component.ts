@@ -9,11 +9,16 @@ import { Album } from '../album.model';
 })
 export class AlbumListComponent implements OnInit {
   albums: Album[];
+  selectedAlbum: Album = null;
 
   constructor() { }
 
-  parentFunctionHandler(album) {
-    alert('Album ' + album.album_name + ' was sent from the album card component');
+  // Method will allow select and deselect
+  getSelectedAlbum(album: Album) {
+    if (this.selectedAlbum == album)
+        this.selectedAlbum = null;
+    else
+        this.selectedAlbum = album;
   }
 
   ngOnInit() {
