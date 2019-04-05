@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Album } from '../album.model';
-import { ALBUMS } from '../albums.data';
+import { AlbumService } from '../album.service';
 
 @Component({
   selector: 'app-album-list',
@@ -12,7 +12,7 @@ export class AlbumListComponent implements OnInit {
   albums: Album[];
   selectedAlbum: Album = null;
 
-  constructor() { }
+  constructor(private albumService: AlbumService) { }
 
   // Method will allow select and deselect
   getSelectedAlbum(album: Album) {
@@ -22,7 +22,11 @@ export class AlbumListComponent implements OnInit {
         this.selectedAlbum = album;
   }
 
+  getAlbums() {
+    this.albums = this.albumService.getAlbums();
+  }
+
   ngOnInit() {
-    this.albums = ALBUMS;
+    this.getAlbums();
   }
 }
