@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
-import { ALBUMS } from './albums.data';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Album } from './album.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlbumService {
+  url = "http://localhost:4445/albums";
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getAlbums() {
-    return ALBUMS;
+  getAlbums(): Observable<Album[]> {
+    return this.http.get<Album[]>(this.url);
   }
 }
