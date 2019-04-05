@@ -7,7 +7,10 @@
     <ul>
       <li>{{ album.album_name }}</li>
       <li>Released: {{ album.year }}</li>
-      <li>{{ album.price }} {{ album.currency }}</li>
+      <li>
+        <span *ngIf="album.on_sale" style="text-decoration:line-through;">{{album.price | number:'1.1-2' | currency:album.currency}}</span>
+        {{ (album.on_sale ? new_price : album.price) | number:'1.2-2' | currency:album.currency }}
+      </li>
     </ul>
   </div>
   <div class="card-footer">

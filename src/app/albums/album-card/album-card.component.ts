@@ -13,6 +13,8 @@ export class AlbumCardComponent implements OnInit {
   @Output()
   albumClicked: EventEmitter<Album> = new EventEmitter<Album>();
 
+  new_price: number;
+
   constructor() {}
 
   showAlbum() {
@@ -20,5 +22,9 @@ export class AlbumCardComponent implements OnInit {
   }
 
   ngOnInit() {
+    // Check if the album is on sale
+    if (this.album.on_sale)
+      // Apply 10% discount
+      this.new_price = this.album.price - (this.album.price * .1);
   }
 }
