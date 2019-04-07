@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { Album } from './albums/album.model';
-import { ALBUMS } from './albums/albums.data';
+import { Album } from "./albums/album.model";
+import { ALBUMS } from "./albums/albums.data";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = 'My Angular Albums';
+  title = "My Angular Albums";
   albumsArray: Album[];
 
   titleCounter = 1;
