@@ -1,17 +1,17 @@
 export interface Album {
-  id: string;
-  artist: number;
+  id: number;
+  artist: string;
   album_name: string;
   genre: string;
   price: number;
-  currency: string;
+  currency?: string;
   on_sale: boolean;
   year: number;
   release_date: string;
   recording_location: string;
   duration: string;
-  url: string;
-  tracks: Track[];
+  URL: string;
+  tracks?: Track[];
 }
 
 export interface Track {
