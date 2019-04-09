@@ -1,15 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { AlbumService } from "../album.service";
+import { Album } from "../album.model";
 
 @Component({
-  selector: 'app-album-details',
-  templateUrl: './album-details.component.html',
-  styleUrls: ['./album-details.component.css']
+  selector: "app-album-details",
+  templateUrl: "./album-details.component.html",
+  styleUrls: ["./album-details.component.css"]
 })
 export class AlbumDetailsComponent implements OnInit {
+  album: Album;
+  new_price: number;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private albumService: AlbumService
+  ) {}
 
   ngOnInit() {
+    this.getAlbum();
   }
 
+  getAlbum() {
+    const id = +this.route.snapshot.paramMap.get("id");
+    this.albumService.getAlbumById(id).subscribe(
+      album => {
+        this.album = album;
+        this.calculateDiscount();
+      },
+      error => console.log("Error: ", error)
+    );
+  }
+
+  calculateDiscount() {
+    // Check if the album is on sale
+    if (this.album.on_sale)
+      // Apply 10% discount
+      this.new_price = this.album.price - this.album.price * 0.1;
+  }
 }
