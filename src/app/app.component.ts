@@ -19,7 +19,7 @@ export class AppComponent {
 
     console.log(JSON.stringify(this.albumsArray, null, 4));
 
-    let interval = setInterval(() => this.titleCounter++, 2000);
+    const interval = setInterval(() => this.titleCounter++, 2000);
 
     setTimeout(() => clearInterval(interval), 6000);
   }
