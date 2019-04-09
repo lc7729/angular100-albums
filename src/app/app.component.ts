@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
         const interval = setInterval(() => this.titleCounter++, 2000);
 
         setTimeout(() => clearInterval(interval), 6000);
+
         this.albumsArray = [
             {
                 id: 1,
