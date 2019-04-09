@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { AlbumListComponent } from './albums/album-list/album-list.component';
 import { AlbumCardComponent } from './albums/album-card/album-card.component';
 import { AlbumService } from './albums/album.service';
+import { AlbumDetailsComponent } from './albums/album-details/album-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlbumListComponent,
-    AlbumCardComponent
+    AlbumCardComponent,
+    AlbumDetailsComponent
   ],
   imports: [
     BrowserModule,
