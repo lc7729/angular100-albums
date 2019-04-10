@@ -6,7 +6,6 @@ import {
 } from "@angular/core";
 
 import { Album } from "./albums/album.model";
-import { ALBUMS } from "./albums/albums.data";
 
 @Component({
   selector: "app-root",
