@@ -1233,7 +1233,6 @@
       "genre": "Pop",
       "duration": "47:55:00",
       "URL": "https://www.allmusic.com/album/black-blue-mw0000103961",
-
       "tracks": [
         {
           "id": 14,
@@ -1395,6 +1394,34 @@
           "length": "3:58"
         }
       ]
+    },
+    {
+      "artist": "J:Kenzo",
+      "album_name": "31RS033",
+      "release_date": "June 15, 2018",
+      "recording_location": "Brighton, UK",
+      "genre": "Dubstep",
+      "duration": "00:17:20",
+      "url": "https://geo-media.beatport.com/image/3cdf2a2b-4797-4a1e-84ff-5b748566ceab.jpg",
+      "price": 4.47,
+      "currency": "USD",
+      "on_sale": false,
+      "year": "2018",
+      "id": 16
+    },
+    {
+      "artist": "Jubei",
+      "album_name": "To Have & Have Not",
+      "release_date": "October 13, 2013",
+      "recording_location": "London, UK",
+      "genre": "Drum & Bass",
+      "duration": "00:08:47",
+      "url": "https://geo-media.beatport.com/image/d827e7b8-cda2-4096-a8ba-4f471fd09e77.jpg",
+      "price": 2.98,
+      "currency": "",
+      "on_sale": false,
+      "year": "2013",
+      "id": 17
     }
   ]
 }

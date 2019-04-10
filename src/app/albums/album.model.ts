@@ -11,7 +11,7 @@ export interface Album {
   recording_location: string;
   duration: string;
   url: string;
-  tracks: Track[];
+  tracks?: Track[];
 }
 
 export interface Track {

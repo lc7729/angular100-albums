@@ -21,6 +21,13 @@ export class AlbumDetailsComponent implements OnInit {
     this.getAlbum();
   }
 
+  removeAlbum() {
+    this.albumService.removeAlbum(this.album.id).subscribe(
+      data => console.log(data),
+      error => console.log(error)
+    );
+  }
+
   getAlbum() {
     const id = +this.route.snapshot.paramMap.get("id");
     this.albumService.getAlbumById(id).subscribe(
