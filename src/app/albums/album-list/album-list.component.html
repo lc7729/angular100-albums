@@ -3,9 +3,6 @@
     <app-album-card
       *ngFor="let album of albumsArray"
       [album]="album"
-      (albumClicked)="getSelectedAlbum($event)"
-      [ngStyle]="{ 'background-color': album.on_sale ? 'green' : '' }"
-      [ngClass]="{ 'text-success bg-success': album == selectedAlbum }"
     ></app-album-card>
   </div>
 </div>
