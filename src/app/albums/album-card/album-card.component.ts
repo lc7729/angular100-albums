@@ -8,7 +8,7 @@ import { Album } from "../album.model";
 })
 export class AlbumCardComponent implements OnInit {
   @Input()
-  albumInfo: Album;
+  album: Album;
 
   constructor() {}
 

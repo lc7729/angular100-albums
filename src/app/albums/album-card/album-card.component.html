@@ -1,16 +1,21 @@
 <div class="card">
   <img
     class="card-img-top cover"
-    src="assets/img/{{ albumInfo.id }}.jpg"
-    alt="{{ albumInfo.album_name }}"
+    src="assets/img/{{ album.id }}.jpg"
+    alt="{{ album.album_name }}"
     style="border: 1px solid grey"
   />
   <div class="card-body">
-    <h4 class="card-title">{{ albumInfo.artist }}</h4>
+    <h4 class="card-title">{{ album.artist }}</h4>
     <ul style="list-style: none;">
-      <li>{{ albumInfo.album_name }}</li>
-      <li>Released: {{ albumInfo.year }}</li>
-      <li>{{ albumInfo.price }} {{ albumInfo.currency }}</li>
+      <li>{{ album.album_name }}</li>
+      <li>Released: {{ album.year }}</li>
+      <li>{{ album.price }} {{ album.currency }}</li>
     </ul>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-primary float-right" (click)="showAlbum()">
+      See Details
+    </button>
   </div>
 </div>
