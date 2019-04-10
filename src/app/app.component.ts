@@ -38,8 +38,6 @@ export class AppComponent {
       this.albumsArray[0].price = this.albumsArray[0].price + 10;
 
       console.log(this.numbers);
-
-      //this.albumsArray.forEach(album => (album.price += 10));
     }, 2000);
 
     setTimeout(() => {
