@@ -8,6 +8,7 @@ import { Album } from "../album.model";
 })
 export class AlbumListComponent implements OnInit {
   albumsArray: Album[];
+  clickedAlbum: string;
 
   ngOnInit(): void {
     this.albumsArray = [
@@ -59,5 +60,6 @@ export class AlbumListComponent implements OnInit {
     alert(
       "Album " + album.album_name + " was sent from the album card component"
     );
+    this.clickedAlbum = `${album.id} ${album.album_name}`;
   }
 }
