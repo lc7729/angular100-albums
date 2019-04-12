@@ -23,8 +23,9 @@ export class AlbumCardComponent implements OnInit {
 
   ngOnInit() {
     // Check if the album is on sale
-    if (this.album.on_sale)
+    if (this.album.on_sale) {
       // Apply 10% discount
-      this.new_price = this.album.price - (this.album.price * .1);
+      this.new_price = this.album.price - this.album.price * 0.1;
+    }
   }
 }
