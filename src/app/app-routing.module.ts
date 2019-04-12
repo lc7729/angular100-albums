@@ -1,12 +1,14 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { AlbumListComponent } from "./albums/album-list/album-list.component";
-import { AlbumDetailsComponent } from "./albums/album-details/album-details.component";
+import { AboutComponent } from "./about/about.component";
+import { NotfoundComponent } from "./notfound/notfound.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "/albums", pathMatch: "full" },
+  { path: "", redirectTo: "/about", pathMatch: "full" },
+  { path: "about", component: AboutComponent },
   { path: "albums", component: AlbumListComponent },
-  { path: "details", component: AlbumDetailsComponent }
+  { path: "**", component: NotfoundComponent, pathMatch: "full" }
 ];
 
 @NgModule({
