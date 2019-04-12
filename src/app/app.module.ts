@@ -9,6 +9,7 @@ import { AlbumCardComponent } from './albums/album-card/album-card.component';
 import { AlbumService } from './albums/album.service';
 import { AlbumDetailsComponent } from './albums/album-details/album-details.component';
 import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AboutComponent } from './about/about.component';
     AlbumListComponent,
     AlbumCardComponent,
     AlbumDetailsComponent,
-    AboutComponent
+    AboutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
